@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
+<script src="login.js"></script>
     <h1>ログイン画面</h>
     <form method="POST">
         <label for="">ユーザー名</label>
-        <input type="text" name="username">
+        <input type="text" name="username" class="validate[required]" required placeholder="nekodaisuki">
         <label for="">パスワード</label>
-        <input type="password" name="password">
+		<input type="password" id="input_pass" name="input_pass" value=""class="validate[required]" required placeholder="半角英数12文字以上推奨">
+  		<button id="btn_passview">表示</button>
         <input type="submit" value="ログイン">
     </form>
 
